@@ -2,13 +2,13 @@
   "name": "@hftickets/common",
   "version": "1.0.3",
   "description": "",
-  "main": "index.js",
-  "types": "./build/index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "files": [
     "build/**/*"
   ],
   "scripts": {
-    "clean": "del .\\build\\*",
+    "clean": "del-cli ./build/*",
     "build": "npm run clean && tsc",
     "pub": "git add . && git commit -m \"Code Updates\" && npm version patch && npm run build && npm publish"
   },
